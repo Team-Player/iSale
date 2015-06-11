@@ -22,3 +22,10 @@ D:\Projects\iSale\iSale.Domain\bin\Debug\ru\System.Web.WebPages.Razor.resources.
 D:\Projects\iSale\iSale.Domain\obj\Debug\iSale.Domain.csprojResolveAssemblyReference.cache
 D:\Projects\iSale\iSale.Domain\obj\Debug\iSale.Domain.dll
 D:\Projects\iSale\iSale.Domain\obj\Debug\iSale.Domain.pdb
+D:\Projects\iSale\iSale.Domain\bin\Debug\iSale.Domain.dll.config
+D:\Projects\iSale\iSale.Domain\bin\Debug\EntityFramework.dll
+D:\Projects\iSale\iSale.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\iSale\iSale.Domain\bin\Debug\EntityFramework.xml
+D:\Projects\iSale\iSale.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\iSale\iSale.Domain\bin\Debug\ru\EntityFramework.resources.dll
+D:\Projects\iSale\iSale.Domain\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

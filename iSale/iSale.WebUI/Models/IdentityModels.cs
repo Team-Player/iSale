@@ -20,14 +20,32 @@ namespace iSale.WebUI.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        // Контекст настроен для использования строки подключения "BaseModels" из файла конфигурации  
+        // приложения (App.config или Web.config). По умолчанию эта строка подключения указывает на базу данных 
+        // "iSale.Domain.Model.BaseModels" в экземпляре LocalDb. 
+        // 
+        // Если требуется выбрать другую базу данных или поставщик базы данных, измените строку подключения "ISaleModels" 
+        // в файле конфигурации приложения.
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+
+        // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
+        // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.
+
+        // public virtual DbSet<MyEntity> MyEntities { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
     }
+
+    //public class MyEntity
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
+    //}
 }
