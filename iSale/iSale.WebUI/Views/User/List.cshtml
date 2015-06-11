@@ -1,0 +1,16 @@
+﻿@using iSale.Domain.Entities;
+@model IEnumerable<User>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var p in Model) {
+    <div>
+        <h3>@p.UserName</h3>
+        @p.Rating
+        <h4>@p.RegistrationDate.ToString("d")</h4>
+    </div>
+}
