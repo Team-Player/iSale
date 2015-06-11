@@ -17,5 +17,50 @@ namespace iSale.Domain.Concrete
         {
             get { return context.Users; }
         }
+
+        public IEnumerable<Event> Events
+        {
+            get { return context.Events; }
+        }
+
+        public IEnumerable<EventMessage> EventMessages
+        {
+            get { return context.EventMessages; }
+        }
+
+        public IEnumerable<Interest> Interests
+        {
+            get { return context.Interests; }
+        }
+
+        public IEnumerable<Location> Locations
+        {
+            get { return context.Locations; }
+        }
+
+        public IEnumerable<Photo> Photos
+        {
+            get { return context.Photos; }
+        }
+
+        public IEnumerable<UserEvent> UserEvents
+        {
+            get { return context.UserEvents; }
+        }
+
+        public IEnumerable<UserFriend> UserFriends
+        {
+            get { return context.UserFriends; }
+        }
+
+        public IEnumerable<UserLogin> UserLogins
+        {
+            get { return context.UserLogins; }
+        }
+
+        public IEnumerable<UserPhoto> UserPhotos
+        {
+            get { return context.UserPhotos; }
+        }
     }
 }

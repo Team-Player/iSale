@@ -80,8 +80,18 @@
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFSaleRepository.cs" />
     <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\EventMessage.cs" />
+    <Compile Include="Entities\Interest.cs" />
     <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Photo.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserEvent.cs" />
+    <Compile Include="Entities\UserFriend.cs" />
+    <Compile Include="Entities\UserLogin.cs" />
+    <Compile Include="Entities\UserPhoto.cs" />
+    <Compile Include="Enums\FriendStatus.cs" />
+    <Compile Include="Enums\ParticipationStatus.cs" />
+    <Compile Include="Migration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

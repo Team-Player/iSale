@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace iSale.Domain.Entities
 {
-    public class Location
+    public class Interest
     {
         public long Id { get; set; }
 
-        public string Name { get; set; }
+        public string Title { get; set; }
 
-        public double Latitude { get; set; }
-
-        public double Longitude { get; set; }
+        public virtual ICollection<User> Users { get; set; }
 
         public virtual ICollection<Event> Events { get; set; }
-
-        public virtual Photo Photo { get; set; }
     }
 }
