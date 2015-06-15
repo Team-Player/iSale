@@ -108,3 +108,6 @@ D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\ru\System.Net.Http.For
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\obj\Debug\iSale.UnitTests.csprojResolveAssemblyReference.cache
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\obj\Debug\iSale.UnitTests.dll
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\obj\Debug\iSale.UnitTests.pdb
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\Swashbuckle.Core.dll
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\BLL.dll
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\BLL.pdb

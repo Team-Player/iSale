@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLL.Services.Login;
+using BLL.Services.Login.Interfaces;
 using Moq;
 using Ninject;
 using iSale.Domain.Abstract;
 using iSale.Domain.Concrete;
 using iSale.Domain.Entities;
+
 
 namespace iSale.WebUI.Infrastructure
 {
@@ -44,6 +47,7 @@ namespace iSale.WebUI.Infrastructure
              //kernel.Bind<IEventRepository>().ToConstant(mock.Object);
 
             kernel.Bind<IEventRepository>().To<EFSaleRepository>();
+            kernel.Bind<IUserRegistrationService>().To<UserRegistrationService>();
         }
     }
 }

@@ -1,3 +1,7 @@
+using System.Web.Http;
+using iSale.WebUI.Infrastructure;
+using NinjectDependencyResolver = Ninject.Web.Mvc.NinjectDependencyResolver;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(iSale.WebAPI.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(iSale.WebAPI.App_Start.NinjectWebCommon), "Stop")]
 
@@ -62,6 +66,7 @@ namespace iSale.WebAPI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             System.Web.Mvc.DependencyResolver.SetResolver(new iSale.WebUI.Infrastructure.NinjectDependencyResolver(kernel));
+            //GlobalConfiguration.Configuration.DependencyResolver 
         }
     }
 }

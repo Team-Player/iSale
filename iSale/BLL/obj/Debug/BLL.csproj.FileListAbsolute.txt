@@ -1,0 +1,10 @@
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\BLL.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\BLL.pdb
+D:\GitProjects\sale\iSale\iSale\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\GitProjects\sale\iSale\iSale\BLL\obj\Debug\BLL.dll
+D:\GitProjects\sale\iSale\iSale\BLL\obj\Debug\BLL.pdb
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\iSale.Domain.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\EntityFramework.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\iSale.Domain.pdb
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\EntityFramework.xml
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\ru\EntityFramework.resources.dll
