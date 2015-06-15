@@ -9,7 +9,7 @@ using iSale.Domain.Entities;
 
 namespace iSale.Domain.Concrete
 {
-    public class EFSaleRepository : ISaleRepository
+    public class EFSaleRepository : IEventRepository
     {
         private EFDbContext context = new EFDbContext();
 

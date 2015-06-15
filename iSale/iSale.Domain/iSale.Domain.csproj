@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B82A2313-ECE6-4B24-B289-51CA03C99904}</ProjectGuid>
+    <ProjectGuid>{B1CEADFA-CE40-4A5A-8397-8B67C5926689}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>iSale.Domain</RootNamespace>
@@ -76,7 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ISaleRepository.cs" />
+    <Compile Include="Abstract\IEventRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFSaleRepository.cs" />
     <Compile Include="Entities\Event.cs" />
@@ -91,7 +91,6 @@
     <Compile Include="Entities\UserPhoto.cs" />
     <Compile Include="Enums\FriendStatus.cs" />
     <Compile Include="Enums\ParticipationStatus.cs" />
-    <Compile Include="Migration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
