@@ -91,6 +91,7 @@
     <Compile Include="Entities\UserPhoto.cs" />
     <Compile Include="Enums\FriendStatus.cs" />
     <Compile Include="Enums\ParticipationStatus.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
