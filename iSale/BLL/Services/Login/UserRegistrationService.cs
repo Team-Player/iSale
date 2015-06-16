@@ -11,9 +11,9 @@ namespace BLL.Services.Login
 {
     public class UserRegistrationService : IUserRegistrationService
     {
-        private IEventRepository _repository;
+        private ISaleRepository _repository;
 
-        public UserRegistrationService(IEventRepository repository)
+        public UserRegistrationService(ISaleRepository repository)
         {
             _repository = repository;
         }

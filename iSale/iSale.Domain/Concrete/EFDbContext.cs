@@ -12,23 +12,27 @@ namespace iSale.Domain.Concrete
     {
         public DbSet<User> Users { get; set; }
 
+        public DbSet<UserLogin> UserLogins { get; set; }
+
+        public DbSet<UserPhoto> UserPhotos { get; set; }
+
+        public DbSet<UserWallpaper> UserWallpapers { get; set; }
+
+        public DbSet<UserFriend> UserFriends { get; set; }
+
+        public DbSet<UserEvent> UserEvents { get; set; }
+
+
         public DbSet<Event> Events { get; set; } 
 
         public DbSet<EventMessage> EventMessages { get; set; }
+
 
         public DbSet<Interest> Interests { get; set; }
 
         public DbSet<Location> Locations { get; set; }
 
         public DbSet<Photo> Photos { get; set; }
-
-        public DbSet<UserEvent> UserEvents { get; set; }
-
-        public DbSet<UserFriend> UserFriends { get; set; }
-
-        public DbSet<UserLogin> UserLogins { get; set; }
-
-        public DbSet<UserPhoto> UserPhotos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

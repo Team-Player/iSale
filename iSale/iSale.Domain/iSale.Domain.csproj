@@ -76,7 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IEventRepository.cs" />
+    <Compile Include="Abstract\ISaleRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFSaleRepository.cs" />
     <Compile Include="Entities\Event.cs" />
@@ -88,6 +88,7 @@
     <Compile Include="Entities\UserEvent.cs" />
     <Compile Include="Entities\UserFriend.cs" />
     <Compile Include="Entities\UserLogin.cs" />
+    <Compile Include="Entities\UserWallpaper.cs" />
     <Compile Include="Entities\UserPhoto.cs" />
     <Compile Include="Enums\FriendStatus.cs" />
     <Compile Include="Enums\ParticipationStatus.cs" />

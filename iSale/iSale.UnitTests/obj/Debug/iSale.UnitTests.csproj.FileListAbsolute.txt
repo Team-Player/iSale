@@ -111,3 +111,6 @@ D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\obj\Debug\iSale.UnitTests.pdb
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\Swashbuckle.Core.dll
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\BLL.dll
 D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\BLL.pdb
+D:\Projects\iSale\iSale.UnitTests\bin\Debug\BLL.dll
+D:\Projects\iSale\iSale.UnitTests\bin\Debug\Swashbuckle.Core.dll
+D:\Projects\iSale\iSale.UnitTests\bin\Debug\BLL.pdb

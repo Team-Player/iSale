@@ -10,9 +10,9 @@ namespace iSale.WebAPI.Controllers
 {
     public class UserController : Controller
     {
-        private IEventRepository repository;
+        private ISaleRepository repository;
 
-        public UserController(IEventRepository eventRepository)
+        public UserController(ISaleRepository eventRepository)
         {
             this.repository = eventRepository;
         }

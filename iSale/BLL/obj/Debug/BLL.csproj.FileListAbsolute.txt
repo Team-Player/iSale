@@ -8,3 +8,13 @@ D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\EntityFramework.dll
 D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\iSale.Domain.pdb
 D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\EntityFramework.xml
 D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\ru\EntityFramework.resources.dll
+D:\Projects\iSale\BLL\bin\Debug\BLL.dll
+D:\Projects\iSale\BLL\bin\Debug\BLL.pdb
+D:\Projects\iSale\BLL\bin\Debug\iSale.Domain.dll
+D:\Projects\iSale\BLL\bin\Debug\EntityFramework.dll
+D:\Projects\iSale\BLL\bin\Debug\iSale.Domain.pdb
+D:\Projects\iSale\BLL\bin\Debug\EntityFramework.xml
+D:\Projects\iSale\BLL\bin\Debug\ru\EntityFramework.resources.dll
+D:\Projects\iSale\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Projects\iSale\BLL\obj\Debug\BLL.dll
+D:\Projects\iSale\BLL\obj\Debug\BLL.pdb

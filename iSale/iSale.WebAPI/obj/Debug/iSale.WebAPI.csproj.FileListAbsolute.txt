@@ -115,3 +115,10 @@ D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.dll
 D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.WebHost.dll
 D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.xml
 D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.WebHost.xml
+D:\Projects\iSale\iSale.WebAPI\bin\BLL.dll
+D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.dll
+D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.WebHost.dll
+D:\Projects\iSale\iSale.WebAPI\bin\Swashbuckle.Core.dll
+D:\Projects\iSale\iSale.WebAPI\bin\BLL.pdb
+D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.xml
+D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.WebHost.xml

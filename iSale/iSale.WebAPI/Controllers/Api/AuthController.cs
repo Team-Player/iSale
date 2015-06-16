@@ -13,9 +13,9 @@ namespace iSale.WebAPI.Controllers.Api
     public class AuthController : ApiController
     {
         private IUserRegistrationService _userRegistrationService;
-        private IEventRepository _repository;
+        private ISaleRepository _repository;
 
-        public AuthController(IUserRegistrationService userRegistrationService, IEventRepository repository)
+        public AuthController(IUserRegistrationService userRegistrationService, ISaleRepository repository)
         {
             _userRegistrationService = userRegistrationService;
             _repository = repository;

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace iSale.Domain.Entities
 {
-    public class UserLogin
+    public class UserWallpaper
     {
-        public string LoginProvider { get; set; }
-
-        public string ProviderKey { get; set; }
-
-        public long UserId { get; set; }
+        public long Id { get; set; }
 
         public User User { get; set; }
     }
