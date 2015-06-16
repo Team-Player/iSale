@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using BLL.Services.Login.Interfaces;
+using BLL.SocialNetwork;
 using iSale.Domain.Abstract;
 using iSale.WebAPI.Models;
 
@@ -13,11 +14,13 @@ namespace iSale.WebAPI.Controllers.Api
     public class AuthController : ApiController
     {
         private IUserRegistrationService _userRegistrationService;
+        private IUserSelectionService _userSelectionService;
         private ISaleRepository _repository;
 
-        public AuthController(IUserRegistrationService userRegistrationService, ISaleRepository repository)
+        public AuthController(IUserRegistrationService userRegistrationService, IUserSelectionService userSelectionService, ISaleRepository repository)
         {
             _userRegistrationService = userRegistrationService;
+            _userSelectionService = userSelectionService;
             _repository = repository;
         }
 
@@ -35,8 +38,17 @@ namespace iSale.WebAPI.Controllers.Api
         }
 
         [HttpPost]
-        public IHttpActionResult LoginViaSocialNetwork()
+        public IHttpActionResult LoginViaSocialNetwork(LoginSocialNetworkModel model)
         {
+            var socialAccountProvider = SocialAccountProviderFactory.GetProvider(model.LoginProvider);
+            string providerAccesssToken = socialAccountProvider.GetAccessToken(model.AccessCode);
+
+            var user = _userSelectionService.GetUserBySocialNetworkBinding(model.LoginProvider, model.ProviderKey);
+            if (user == null)
+            {
+                //user = _userRegistrationService.Register(model.Email, model.Password, model.FirstName, model.LastName, model.NickName, "");
+            }
+
             return Ok();
         }
 
@@ -45,7 +57,7 @@ namespace iSale.WebAPI.Controllers.Api
             var user = _userRegistrationService.Register(model.Email, model.Password, model.FirstName, model.LastName,
                 model.NickName, "");
 
-            return Ok(user);
+            return Ok(user.AccessTokens.FirstOrDefault());
         }
     }
 }

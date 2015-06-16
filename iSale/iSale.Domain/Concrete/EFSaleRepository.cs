@@ -135,5 +135,10 @@ namespace iSale.Domain.Concrete
         {
             get { return context.Photos; }
         }
+
+        public IEnumerable<AccessToken> AccessTokens
+        {
+            get { return context.AccessTokens; }
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using iSale.Domain.Concrete;
 
 namespace iSale.WebAPI
 {
@@ -15,6 +16,9 @@ namespace iSale.WebAPI
     {
         void Application_Start(object sender, EventArgs e)
         {
+            
+            //new MigrateDatabaseToLatestVersion
+            //Database.SetInitializer(new DropCreateDatabaseAlways<EFDbContext>());
             // Код, выполняемый при запуске приложения
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

@@ -42,7 +42,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Login\Interfaces\IUserRegistrationService.cs" />
+    <Compile Include="Services\Login\Interfaces\IUserSelectionService.cs" />
     <Compile Include="Services\Login\UserRegistrationService.cs" />
+    <Compile Include="Services\Login\UserSelectionService.cs" />
+    <Compile Include="Services\Shared\RandomStringGenerator.cs" />
+    <Compile Include="SocialNetwork\SocialAccountProvider.cs" />
+    <Compile Include="SocialNetwork\SocialAccountProviderFactory.cs" />
+    <Compile Include="SocialNetwork\VkAccountProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\iSale.Domain\iSale.Domain.csproj">
@@ -50,6 +56,7 @@
       <Name>iSale.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -34,6 +34,8 @@ namespace iSale.Domain.Concrete
 
         public DbSet<Photo> Photos { get; set; }
 
+        public DbSet<AccessToken> AccessTokens { get; set; } 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

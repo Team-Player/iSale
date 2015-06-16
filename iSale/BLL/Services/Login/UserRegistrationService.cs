@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BLL.Services.Login.Interfaces;
+using BLL.Services.Shared;
 using iSale.Domain.Abstract;
 using iSale.Domain.Entities;
 
@@ -34,7 +35,18 @@ namespace BLL.Services.Login
                 NickName = nickName
             };
 
+            user.AccessTokens = new List<AccessToken>();
+            user.AccessTokens.Add(new AccessToken{Key = new RandomStringGenerator().Generate()});
+
+            _repository.SaveUser(user);
             return user;
+        }
+
+        public UserLogin CreateUserLogin(long userId, string loginProvider, string providerKey)
+        {
+            UserLogin usrLogin = new UserLogin();
+
+            return usrLogin;
         }
     }
 }

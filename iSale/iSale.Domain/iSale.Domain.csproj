@@ -79,6 +79,7 @@
     <Compile Include="Abstract\ISaleRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFSaleRepository.cs" />
+    <Compile Include="Entities\AccessToken.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\EventMessage.cs" />
     <Compile Include="Entities\Interest.cs" />

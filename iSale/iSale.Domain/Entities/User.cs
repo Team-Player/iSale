@@ -38,6 +38,8 @@ namespace iSale.Domain.Entities
 
         public virtual ICollection<UserFriend> RequestingFriends { get; set; }
 
+        public virtual ICollection<AccessToken> AccessTokens { get; set; }
+
     }
 
 

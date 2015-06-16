@@ -11,5 +11,7 @@ namespace BLL.Services.Login.Interfaces
     {
         User Register(string email, string password, string firstName, string lastName, string nickName,
             string middleName);
+
+        UserLogin CreateUserLogin(long userId, string loginProvider, string providerKey);
     }
 }
