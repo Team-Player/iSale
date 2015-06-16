@@ -59,4 +59,3 @@ D:\GitProjects\sale\iSale\iSale\iSale.Domain\bin\Debug\ru\System.Web.WebPages.De
 D:\GitProjects\sale\iSale\iSale\iSale.Domain\bin\Debug\ru\System.Web.WebPages.Razor.resources.dll
 D:\GitProjects\sale\iSale\iSale\iSale.Domain\obj\Debug\iSale.Domain.dll
 D:\GitProjects\sale\iSale\iSale\iSale.Domain\obj\Debug\iSale.Domain.pdb
-D:\GitProjects\sale\iSale\iSale\iSale.Domain\obj\Debug\iSale.Domain.csprojResolveAssemblyReference.cache

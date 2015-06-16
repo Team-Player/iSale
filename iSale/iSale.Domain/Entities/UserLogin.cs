@@ -14,8 +14,6 @@ namespace iSale.Domain.Entities
 
         public string ProviderKey { get; set; }
 
-        public long UserId { get; set; }
-
         public User User { get; set; }
     }
 }

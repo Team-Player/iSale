@@ -64,7 +64,7 @@ namespace iSale.Domain.Concrete
         public int AddUserLogin(UserLogin userLogin)
         {
             // В данной таблице должен использоваться составной ключ: UserId и ProviderKey
-            if (userLogin.UserId != 0 && userLogin.ProviderKey != "")
+            if (userLogin.ProviderKey != "")
             {
                 context.UserLogins.Add(userLogin);
             }
@@ -73,7 +73,7 @@ namespace iSale.Domain.Concrete
 
         public UserLogin DeleteUserLogin(string loginProvider, long userID)
         {
-            UserLogin dbEntry = context.UserLogins.Where(u => u.UserId == userID && u.LoginProvider == loginProvider).FirstOrDefault();
+            UserLogin dbEntry = context.UserLogins.Where(u => u.Id == userID && u.LoginProvider == loginProvider).FirstOrDefault();
             if (dbEntry != null)
             {
                 context.UserLogins.Remove(dbEntry);
