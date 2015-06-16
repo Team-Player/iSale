@@ -46,7 +46,7 @@ namespace iSale.WebUI.Infrastructure
              //
              //kernel.Bind<IEventRepository>().ToConstant(mock.Object);
 
-            kernel.Bind<IEventRepository>().To<EFSaleRepository>();
+            kernel.Bind<ISaleRepository>().To<EFSaleRepository>();
             kernel.Bind<IUserRegistrationService>().To<UserRegistrationService>();
         }
     }
