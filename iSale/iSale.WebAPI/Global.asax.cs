@@ -9,6 +9,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using iSale.Domain.Concrete;
+using iSale.WebAPI.App_Start;
 
 namespace iSale.WebAPI
 {
@@ -16,7 +17,7 @@ namespace iSale.WebAPI
     {
         void Application_Start(object sender, EventArgs e)
         {
-            
+            AutoMapperConfiguration.Register();
             //new MigrateDatabaseToLatestVersion
             //Database.SetInitializer(new DropCreateDatabaseAlways<EFDbContext>());
             // Код, выполняемый при запуске приложения

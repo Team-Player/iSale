@@ -33,5 +33,11 @@ namespace BLL.Services.Login
 
             return null;
         }
+
+        public User GetUserByAccessToken(string accessToken)
+        {
+            return _repository.AccessTokens.FirstOrDefault(at => at.Key == accessToken).User;
+            //return _repository.Users.FirstOrDefault(u => u.AccessTokens.Any(t => t.Key == accessToken));
+        }
     }
 }

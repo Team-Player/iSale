@@ -82,6 +82,29 @@ namespace iSale.Domain.Concrete
             return dbEntry;
         }
 
+        //*****************************************************
+
+        public AccessToken CreateAccessToken(AccessToken accessToken, User user)
+        {
+            if (accessToken != null)
+            {
+                context.AccessTokens.Add(accessToken);
+                
+                context.SaveChanges();
+            }
+            return accessToken;
+        }
+
+        public void DeleteAccessToken(AccessToken accessToken)
+        {
+            AccessToken dbEntry = context.AccessTokens.Find(accessToken.Id);
+            if (dbEntry != null)
+            {
+                context.AccessTokens.Remove(dbEntry);
+                context.SaveChanges();
+            }
+        }
+
         // ****************************************************
         public IEnumerable<UserPhoto> UserPhotos
         {

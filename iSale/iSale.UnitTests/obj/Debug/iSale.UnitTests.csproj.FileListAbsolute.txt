@@ -114,3 +114,7 @@ D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\BLL.pdb
 D:\Projects\iSale\iSale.UnitTests\bin\Debug\BLL.dll
 D:\Projects\iSale\iSale.UnitTests\bin\Debug\Swashbuckle.Core.dll
 D:\Projects\iSale\iSale.UnitTests\bin\Debug\BLL.pdb
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\AutoMapper.Net4.dll
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\AutoMapper.dll
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\AutoMapper.pdb
+D:\GitProjects\sale\iSale\iSale\iSale.UnitTests\bin\Debug\AutoMapper.xml

@@ -14,6 +14,8 @@ namespace iSale.Domain.Entities
 
         public string ProviderKey { get; set; }
 
-        public User User { get; set; }
+        public string AccessToken { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

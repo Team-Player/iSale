@@ -18,3 +18,10 @@ D:\Projects\iSale\BLL\bin\Debug\ru\EntityFramework.resources.dll
 D:\Projects\iSale\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\Projects\iSale\BLL\obj\Debug\BLL.dll
 D:\Projects\iSale\BLL\obj\Debug\BLL.pdb
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\Newtonsoft.Json.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\Newtonsoft.Json.xml
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\AutoMapper.Net4.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\AutoMapper.dll
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\AutoMapper.pdb
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\AutoMapper.xml
+D:\GitProjects\sale\iSale\iSale\BLL\bin\Debug\AutoMapper.Net4.pdb

@@ -10,7 +10,7 @@ namespace BLL.SocialNetwork
 {
     public abstract class SocialAccountProvider
     {
-        public abstract string GetAccessToken(string accessCode);
+        public abstract UserLoginData GetUserData(string accessCode);
 
         protected string GetResponse(string url)
         {
@@ -21,7 +21,7 @@ namespace BLL.SocialNetwork
                 {
                     using (Stream receivedStream = response.GetResponseStream())
                     {
-                        StreamReader readStream = response.CharacterSet == null ? new StreamReader(receivedStream) : new StreamReader(receivedStream, Encoding.GetEncoding(response.CharacterSet));
+                        StreamReader readStream = string.IsNullOrEmpty(response.CharacterSet) ? new StreamReader(receivedStream) : new StreamReader(receivedStream, Encoding.GetEncoding(response.CharacterSet));
                         return readStream.ReadToEnd();
                     }
                 }

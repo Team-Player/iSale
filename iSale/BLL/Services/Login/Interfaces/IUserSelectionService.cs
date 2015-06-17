@@ -10,5 +10,7 @@ namespace BLL.Services.Login.Interfaces
     public interface IUserSelectionService
     {
         User GetUserBySocialNetworkBinding(string loginProvider, string providerKey);
+
+        User GetUserByAccessToken(string accessToken);
     }
 }

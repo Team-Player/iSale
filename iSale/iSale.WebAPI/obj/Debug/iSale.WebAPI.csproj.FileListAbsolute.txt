@@ -122,3 +122,8 @@ D:\Projects\iSale\iSale.WebAPI\bin\Swashbuckle.Core.dll
 D:\Projects\iSale\iSale.WebAPI\bin\BLL.pdb
 D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.xml
 D:\Projects\iSale\iSale.WebAPI\bin\Ninject.Web.WebApi.WebHost.xml
+D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\AutoMapper.Net4.dll
+D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\AutoMapper.dll
+D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\AutoMapper.pdb
+D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\AutoMapper.xml
+D:\GitProjects\sale\iSale\iSale\iSale.WebAPI\bin\AutoMapper.Net4.pdb

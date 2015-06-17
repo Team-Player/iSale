@@ -42,11 +42,38 @@ namespace BLL.Services.Login
             return user;
         }
 
-        public UserLogin CreateUserLogin(long userId, string loginProvider, string providerKey)
+        public UserLogin CreateUserLogin(User user, string loginProvider, string providerKey, string accessToken)
         {
-            UserLogin usrLogin = new UserLogin();
+            UserLogin usrLogin = new UserLogin()
+            {
+                AccessToken = accessToken,
+                LoginProvider = loginProvider,
+                ProviderKey = providerKey,
+                User = user
+            };
+
+            _repository.AddUserLogin(usrLogin);
 
             return usrLogin;
+        }
+
+        public string CreateAccessToken(User user)
+        {
+            string accToken = new RandomStringGenerator().Generate();
+            AccessToken accessToken = new AccessToken{Key = accToken, User = user};
+            
+            _repository.CreateAccessToken(accessToken, user);
+
+            return accToken;
+        }
+
+        public void DeleteAccessToken(User user, string accesToken)
+        {
+            AccessToken currAccesToken = user.AccessTokens.FirstOrDefault(at => at.Key == accesToken);
+            if (currAccesToken != null)
+            {
+                _repository.DeleteAccessToken(currAccesToken);
+            }
         }
     }
 }

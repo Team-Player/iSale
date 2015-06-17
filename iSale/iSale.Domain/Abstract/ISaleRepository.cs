@@ -16,9 +16,15 @@ namespace iSale.Domain.Abstract
 
         // public DbSet<UserLogin> UserLogins { get; set; }
         IEnumerable<UserLogin> UserLogins { get; }
+
+        IEnumerable<AccessToken> AccessTokens { get; }
         int AddUserLogin(UserLogin userLogin);
         // long ChangeUserLogin(string loginProvider, long userLoginID); - не актуален, изменение через удаление и создание
         UserLogin DeleteUserLogin(string loginProvider, long userLoginID);
+
+        AccessToken CreateAccessToken(AccessToken accessToken, User user);
+
+        void DeleteAccessToken(AccessToken accessToken);
 
         // public DbSet<UserPhoto> UserPhotos { get; set; }
         IEnumerable<UserPhoto> UserPhotos { get; }
