@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
+using BLL.Models.Response;
 using iSale.Domain.Entities;
-using iSale.WebAPI.Models.Response;
 
 namespace iSale.WebAPI.App_Start
 {
@@ -13,6 +13,7 @@ namespace iSale.WebAPI.App_Start
         public static void Register()
         {
             Mapper.CreateMap<User, UserModel>();
+            Mapper.CreateMap<Interest, InterestModel>();
         }
     }
 }

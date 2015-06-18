@@ -1,3 +1,6 @@
+using System.Collections;
+using iSale.Domain.Entities;
+
 namespace iSale.Domain.Migrations
 {
     using System;
@@ -15,18 +18,13 @@ namespace iSale.Domain.Migrations
 
         protected override void Seed(iSale.Domain.Concrete.EFDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Interests.AddOrUpdate(i => i.Id,
+                new Interest {Id = 1, Title = "Футбол"},
+                new Interest {Id = 2, Title = "Боулинг"},
+                new Interest { Id = 3, Title = "Рыбалка"},
+                new Interest { Id = 4, Title = "Кино"}
+                );
+            
         }
     }
 }

@@ -182,20 +182,13 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\AuthController.cs" />
+    <Compile Include="Controllers\Api\UserController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
-    <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\LoginSocialNetworkModel.cs" />
-    <Compile Include="Models\RegistrationModel.cs" />
-    <Compile Include="Models\Response\AuthResponseModel.cs" />
-    <Compile Include="Models\Response\BaseResponseModel.cs" />
-    <Compile Include="Models\Response\MessageResponseModel.cs" />
-    <Compile Include="Models\Response\UserModel.cs" />
-    <Compile Include="Models\SecurityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

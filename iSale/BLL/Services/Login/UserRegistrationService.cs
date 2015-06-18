@@ -42,14 +42,15 @@ namespace BLL.Services.Login
             return user;
         }
 
-        public UserLogin CreateUserLogin(User user, string loginProvider, string providerKey, string accessToken)
+        public UserLogin CreateUserLogin(User user, string loginProvider, string providerKey, string accessToken, string avatar)
         {
             UserLogin usrLogin = new UserLogin()
             {
                 AccessToken = accessToken,
                 LoginProvider = loginProvider,
                 ProviderKey = providerKey,
-                User = user
+                User = user,
+                Avatar = avatar
             };
 
             _repository.AddUserLogin(usrLogin);
@@ -73,6 +74,15 @@ namespace BLL.Services.Login
             if (currAccesToken != null)
             {
                 _repository.DeleteAccessToken(currAccesToken);
+            }
+        }
+
+        public void UpdateUserLogin(User user, string accessToken, string loginProvider, string avatar)
+        {
+            var userLogin = user.UserLogins.FirstOrDefault(ul => ul.LoginProvider == loginProvider);
+            if (userLogin != null)
+            {
+                _repository.UpdateUserLogin(accessToken, userLogin, avatar);
             }
         }
     }

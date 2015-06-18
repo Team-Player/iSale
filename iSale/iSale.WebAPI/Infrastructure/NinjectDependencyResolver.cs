@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLL.Services.Events;
+using BLL.Services.Events.Interfaces;
 using BLL.Services.Login;
 using BLL.Services.Login.Interfaces;
 using Moq;
@@ -49,6 +51,7 @@ namespace iSale.WebUI.Infrastructure
             kernel.Bind<ISaleRepository>().To<EFSaleRepository>();
             kernel.Bind<IUserRegistrationService>().To<UserRegistrationService>();
             kernel.Bind<IUserSelectionService>().To<UserSelectionService>();
+            kernel.Bind<IUserInterestsService>().To<UserInterestsService>();
         }
     }
 }

@@ -16,6 +16,8 @@ namespace iSale.Domain.Entities
 
         public string AccessToken { get; set; }
 
+        public string Avatar { get; set; }
+
         public virtual User User { get; set; }
     }
 }

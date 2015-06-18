@@ -12,6 +12,8 @@ namespace BLL.SocialNetwork
     {
         public abstract UserLoginData GetUserData(string accessCode);
 
+        public abstract void CreatePost(string accessToken);
+
         protected string GetResponse(string url)
         {
             var request = (HttpWebRequest)WebRequest.Create(url);

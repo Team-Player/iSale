@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace iSale.WebAPI.Models
+namespace BLL.Models
 {
     public class LoginSocialNetworkModel : RegistrationModel
     {

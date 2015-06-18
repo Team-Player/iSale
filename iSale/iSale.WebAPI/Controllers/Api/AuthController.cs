@@ -6,13 +6,13 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using AutoMapper;
+using BLL.Models;
+using BLL.Models.Response;
 using BLL.Services.Login;
 using BLL.Services.Login.Interfaces;
 using BLL.SocialNetwork;
 using iSale.Domain.Abstract;
 using iSale.Domain.Entities;
-using iSale.WebAPI.Models;
-using iSale.WebAPI.Models.Response;
 
 namespace iSale.WebAPI.Controllers.Api
 {
@@ -54,6 +54,7 @@ namespace iSale.WebAPI.Controllers.Api
         {
             var socialAccountProvider = SocialAccountProviderFactory.GetProvider(model.LoginProvider);
             UserLoginData userData = socialAccountProvider.GetUserData(model.AccessCode);
+            
             string accessToken = string.Empty;
 
             var user = _userSelectionService.GetUserBySocialNetworkBinding(model.LoginProvider, userData.ProviderKey);
@@ -61,16 +62,17 @@ namespace iSale.WebAPI.Controllers.Api
             {
                 user = _userRegistrationService.Register(userData.Email, model.Password, userData.FirstName, userData.LastName, model.NickName, "");
                 UserLogin userLogin = _userRegistrationService.CreateUserLogin(user, model.LoginProvider,
-                    userData.ProviderKey, userData.AccessToken);
+                    userData.ProviderKey, userData.AccessToken, userData.Avatar);
                 accessToken = user.AccessTokens.FirstOrDefault().Key;
             }
             else
             {
                 accessToken = _userRegistrationService.CreateAccessToken(user);
+                _userRegistrationService.UpdateUserLogin(user, userData.AccessToken, model.LoginProvider, userData.Avatar);
             }
 
             var userModel = Mapper.Map<UserModel>(user);
-
+            userModel.Avatar = userData.Avatar;
             return Ok(new AuthResponseModel{Success = 1, User = userModel, AccessToken = accessToken});
         }
 

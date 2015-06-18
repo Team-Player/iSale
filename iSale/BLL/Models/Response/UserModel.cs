@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace iSale.WebAPI.Models.Response
+namespace BLL.Models.Response
 {
     public class UserModel
     {
@@ -22,5 +22,7 @@ namespace iSale.WebAPI.Models.Response
         public DateTime RegistrationDate { get; set; }
 
         public int Rating { get; set; }
+
+        public string Avatar { get; set; }
     }
 }

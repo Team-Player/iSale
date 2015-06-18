@@ -39,6 +39,7 @@ namespace iSale.Domain.Concrete
                     dbEntry.NickName = user.NickName;
                     dbEntry.PhoneNumber = user.PhoneNumber;
                     dbEntry.Rating = user.Rating;
+                    dbEntry.Interests = user.Interests;
                 }
             }
             return context.SaveChanges();
@@ -69,6 +70,17 @@ namespace iSale.Domain.Concrete
                 context.UserLogins.Add(userLogin);
             }
             return context.SaveChanges();
+        }
+
+        public void UpdateUserLogin(string accessToken, UserLogin userLogin, string avatar)
+        {
+            var dbEntry = context.UserLogins.Find(userLogin.Id);
+            if (dbEntry != null)
+            {
+                dbEntry.AccessToken = accessToken;
+                dbEntry.Avatar = avatar;
+                context.SaveChanges();
+            }
         }
 
         public UserLogin DeleteUserLogin(string loginProvider, long userID)

@@ -12,7 +12,9 @@ namespace BLL.Services.Login.Interfaces
         User Register(string email, string password, string firstName, string lastName, string nickName,
             string middleName);
 
-        UserLogin CreateUserLogin(User user, string loginProvider, string providerKey, string accessToken);
+        UserLogin CreateUserLogin(User user, string loginProvider, string providerKey, string accessToken, string avatar);
+
+        void UpdateUserLogin(User user, string accessToken, string loginProvider, string avatar);
 
         string CreateAccessToken(User user);
 

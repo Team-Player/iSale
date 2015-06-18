@@ -19,6 +19,8 @@ namespace iSale.Domain.Abstract
 
         IEnumerable<AccessToken> AccessTokens { get; }
         int AddUserLogin(UserLogin userLogin);
+
+        void UpdateUserLogin(string accessToken, UserLogin userLogin, string avatar);
         // long ChangeUserLogin(string loginProvider, long userLoginID); - не актуален, изменение через удаление и создание
         UserLogin DeleteUserLogin(string loginProvider, long userLoginID);
 
@@ -26,7 +28,9 @@ namespace iSale.Domain.Abstract
 
         void DeleteAccessToken(AccessToken accessToken);
 
-        // public DbSet<UserPhoto> UserPhotos { get; set; }
+        IEnumerable<Interest> Interests { get; }
+
+            // public DbSet<UserPhoto> UserPhotos { get; set; }
         IEnumerable<UserPhoto> UserPhotos { get; }
         // long SaveUserPhoto(UserPhoto userPhoto);
         // User DeleteUserPhoto(long userID);
@@ -53,7 +57,7 @@ namespace iSale.Domain.Abstract
         // public DbSet<EventMessage> EventMessages { get; set; }
 
 
-        // public DbSet<Interest> Interests { get; set; }
+        //public DbSet<Interest> Interests { get; set; }
 
         // public DbSet<Location> Locations { get; set; }
 
