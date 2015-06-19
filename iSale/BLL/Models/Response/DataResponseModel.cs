@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL.Models.Response
 {
-    public class DataResponseModel : MessageResponseModel
+    public class DataResponseModel<T>: MessageResponseModel
     {
-        public object Data { get; set; }
+        public T Data { get; set; }
     }
 }

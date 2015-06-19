@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
+using BLL.Helpers;
 using BLL.Models;
 using BLL.Models.Response;
 using BLL.Services.Events;
@@ -40,31 +41,32 @@ namespace iSale.WebAPI.Controllers.Api
         [HttpPost]
         public IHttpActionResult EditUserInterests(EditInterestModel model)
         {
-            var user = _userSelectionService.GetUserByAccessToken(model.AccessToken);
+            var user = _userSelectionService.GetUserByAccessToken(AuthorizationHelper.GetHeaderValue(Request, "Authorization"));
             if (user == null)
-                return Ok(new MessageResponseModel {Success = 0, Message = "Неверный Accesstoken"});
+                return Ok(new DataResponseModel<string> {Success = 0, Message = "Неверный Accesstoken"});
                 
             _userInterestsService.SaveInterests(user, model);
 
-            return Ok(new MessageResponseModel{Success = 1, Message = "Интересы успешно сохранены"});
+            return Ok(new DataResponseModel<string> {Success = 1, Message = "Интересы успешно сохранены"});
         }
         
         [HttpPost]
-        public IHttpActionResult GetUserIterests(SecurityModel model)
+        public IHttpActionResult GetUserInterests()
         {
-            var user = _userSelectionService.GetUserByAccessToken(model.AccessToken);
+            var user = _userSelectionService.GetUserByAccessToken(AuthorizationHelper.GetHeaderValue(Request, "Authorization"));
             if (user == null)
-                return Ok(new MessageResponseModel {Success = 0, Message = "Неверный AccessToken"});
+                return Ok(new DataResponseModel<string> {Success = 0, Message = "Неверный AccessToken"});
 
             List<InterestModel> result = Mapper.Map<List<Interest>, List<InterestModel>>(user.Interests.ToList());
 
-            return Ok(new DataResponseModel{Data = result, Success = 1});
+            return Ok(new DataResponseModel<List<InterestModel>>{Data = result, Success = 1});
         }
 
+        [HttpGet]
         public IHttpActionResult GetInterests()
         {
             List<InterestModel> result = Mapper.Map<List<Interest>, List<InterestModel>>(_repository.Interests.ToList());
-            return Ok(new DataResponseModel{Success = 1, Data = result});
+            return Ok(new DataResponseModel<List<InterestModel>>{Success = 1, Data = result});
         }
     }
 }

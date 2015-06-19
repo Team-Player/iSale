@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using AutoMapper;
+using BLL.Helpers;
 using BLL.Models;
 using BLL.Models.Response;
 using BLL.Services.Login;
@@ -41,12 +42,12 @@ namespace iSale.WebAPI.Controllers.Api
         [HttpPost]
         public IHttpActionResult Logout(SecurityModel model)
         {
-            var currentUser = _userSelectionService.GetUserByAccessToken(model.AccessToken);
+            var currentUser = _userSelectionService.GetUserByAccessToken(AuthorizationHelper.GetHeaderValue(Request, "Authorization"));
             if (currentUser == null)
-                return Ok(new MessageResponseModel{Message = "Неверный AccessToken", Success = 0});
+                return Ok(new DataResponseModel<string> {Message = "Неверный AccessToken", Success = 0});
             
             _userRegistrationService.DeleteAccessToken(currentUser, model.AccessToken);
-            return Ok(new MessageResponseModel{Message = "Вы успешно вышли", Success = 1});
+            return Ok(new DataResponseModel<string> { Message = "Вы успешно вышли", Success = 1 });
         }
 
         [HttpPost]
@@ -73,7 +74,8 @@ namespace iSale.WebAPI.Controllers.Api
 
             var userModel = Mapper.Map<UserModel>(user);
             userModel.Avatar = userData.Avatar;
-            return Ok(new AuthResponseModel{Success = 1, User = userModel, AccessToken = accessToken});
+            userModel.AccessToken = accessToken;
+            return Ok(new DataResponseModel<UserModel> {Success = 1, Data = userModel});
         }
 
         public IHttpActionResult Register(RegistrationModel model)

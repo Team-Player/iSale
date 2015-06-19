@@ -24,5 +24,7 @@ namespace BLL.Models.Response
         public int Rating { get; set; }
 
         public string Avatar { get; set; }
+
+        public string AccessToken { get; set; }
     }
 }

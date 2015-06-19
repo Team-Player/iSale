@@ -52,6 +52,7 @@ namespace iSale.WebUI.Infrastructure
             kernel.Bind<IUserRegistrationService>().To<UserRegistrationService>();
             kernel.Bind<IUserSelectionService>().To<UserSelectionService>();
             kernel.Bind<IUserInterestsService>().To<UserInterestsService>();
+            kernel.Bind<IEventService>().To<EventService>();
         }
     }
 }
